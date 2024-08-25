@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "baseUrl": "src", // src 폴더를 기준으로 설정
+      "paths": {
+        "@components/*": ["components/*"],
+        "@app/*": ["app/*"],
+        "@pages/*": ["pages/*"],
+        "@shared/*": ["shared/*"],
+        "@widgets/*": ["widgets/*"],
+      }
+  },
+  "include": ["src"]
+}
