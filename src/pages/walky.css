@@ -92,3 +92,14 @@ p {
     height: 5rem;
     display: block;
 }
+
+.focusWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.focusSvg {
+    width: 20rem;
+}
