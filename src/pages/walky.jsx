@@ -5,8 +5,8 @@ const WalkyPage = () => {
     return (
         <div className="container">
             <div className="focusWrap">
-                <div className="focusSvg"><img src={focusImage} alt="Focus" /></div>
-                <div className="focusSvg"><img src={focusImage} alt="Focus" /></div>
+                <div><img className='focusSvg' src={focusImage} alt="Focus" /></div>
+                <div><img className='focusSvg' src={focusImage} alt="Focus" /></div>
             </div>
             <div className="walkySub">Where                     are        you                 now?</div>
             <div className="walkyTitle">
@@ -14,6 +14,10 @@ const WalkyPage = () => {
                 Talky
             </div>
             <div className="walkySub">Call Back                                              ASAP</div>
+            <div className="focusWrap">
+                <div><img className='focusSvg' src={focusImage} alt="Focus" /></div>
+                <div><img className='focusSvg' src={focusImage} alt="Focus" /></div>
+            </div>
             <div className="callBtn">
                 <p>start</p>
             </div>

@@ -84,7 +84,7 @@ p {
 }
 
 .callBtn:hover {
-    background-color: #dedede;
+    background-color: #42ff87;
 }
 
 .svg {
@@ -101,5 +101,5 @@ p {
 }
 
 .focusSvg {
-    width: 20rem;
+    width: 2rem;
 }
