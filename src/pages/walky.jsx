@@ -1,5 +1,15 @@
 import './walky.css'
 import focusImage from './focus.svg'; // 이미지 파일을 같은 폴더에서 import
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+
+// gsap.registerPlugin(useGSAP);
+gsap.to(".callBtn", { // 타겟
+    x: 200, // 속성
+    duration: 2// 속성 값(선택)
+    });
+
 
 const WalkyPage = () => {
     return (
