@@ -4,19 +4,25 @@ import focusImage from './focus.svg'; // 이미지 파일을 같은 폴더에서
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
+import { Draggable } from "gsap/Draggable";
 
 const WalkyPage = () => {
     
-    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(useGSAP,Draggable,TextPlugin);
 
     useGSAP(()=>{
+        Draggable.create(".callBtn", {
+            bounds: ".container",
+            inertia: true
+        });
+
         gsap.to(".callBtn", {
             rotation: 360, x: 100, duration: 1 
         });
 
         gsap.to(".text", {
             duration: 2,
-            text: "안녕하세요 삥삥이에요",
+            text: "Hello, We are Neuhas!",
             delay: 1
         });
     },[]);
