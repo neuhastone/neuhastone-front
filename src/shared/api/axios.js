@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'https://api.example.com', // API의 기본 URL을 설정합니다.
+  baseURL: 'http://localhost:3000', // API의 기본 URL을 설정합니다.
   headers: {
     'Content-Type': 'application/json',
   },
