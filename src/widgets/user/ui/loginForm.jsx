@@ -13,8 +13,8 @@ const LoginForm = () => {
     navigate("/signup");
   }
 
-  const redirectHome=()=>{
-    navigate("/");
+  const redirectProject=()=>{
+    navigate("/project");
   }
 
   const handleSubmit = async (e) => {
@@ -25,7 +25,7 @@ const LoginForm = () => {
     })
     const {accessToken} = data
     setCookie("accessToken", accessToken, {path: '/' });
-    redirectHome()
+    redirectProject()
   };
 
   return(
