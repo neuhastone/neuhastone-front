@@ -1,33 +1,33 @@
 
 import { useNavigate } from "react-router-dom";
-// import axiosInstance from '@shared/api/axios';
 import { useState } from 'react';
 import Input from '@shared/ui/input'
-
+import requestLogin from  '@widgets/user/api/login'
+import {setCookie} from  '@shared/cookie/cookie'
 const LoginForm = () => {
   const navigate = useNavigate()  
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const redirectSignup=()=>{
+    navigate("/signup");
+  }
+
+  const redirectProject=()=>{
+    navigate("/project");
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     
-    const redirectSignup=()=>{
-      navigate("/signup");
-    }
+    const { data} = await requestLogin({
+      email, password
+    })
+    const {accessToken} = data
+    setCookie("accessToken", accessToken, {path: '/' });
+    redirectProject()
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        // 로그인 처리 로직 추가
-        console.log('이메일:', email);
-        console.log('비밀번호:', password);
-
-          // try {
-        // const response = await axiosInstance.post('/endpoint'); // API 엔드포인트 호출
-        // print(response.data);
-          // } catch (err) {
-            // setError(err);
-          // } finally {
-            // setLoading(false);
-          // }    
-    };
   return(
     <form className="login-form" onSubmit={handleSubmit}>
         <Input

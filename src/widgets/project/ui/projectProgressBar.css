@@ -1,0 +1,16 @@
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.step-indicator div {
+  width: 15%;
+  height: 5px;
+  background-color: lightgray;
+}
+
+.step-indicator div.active {
+  background-color: #000;
+}

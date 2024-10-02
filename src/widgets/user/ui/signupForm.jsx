@@ -1,22 +1,33 @@
 import { useState } from 'react';
 import Input from '@shared/ui/input'
+import requestSignup from  '@widgets/user/api/signup'
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
-
+  const navigate = useNavigate()  
+  
   const [nickName, setNickName] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setComfirmPassword] = useState('');
   
-  const handleSubmit = (e) => {
+  const redirectHome=()=>{
+    navigate("/");
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // 로그인 처리 로직 추가
-    console.log('별명:', nickName);
-    console.log('이름:', name);
-    console.log('이메일:', email);
-    console.log('비밀번호:', password);
-    console.log('비밀번호 확인:', confirmPassword);
+    const {status, data} = await requestSignup({
+      nickname:nickName, 
+      name,
+      email,
+      password
+    })
+    console.log(status,data)
+
+    redirectHome()
   };
 
 

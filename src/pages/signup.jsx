@@ -1,10 +1,15 @@
 import '@pages/signup.css';
 import SignupForm from '@widgets/user/ui/signupForm'
-const SignupPage = () => {  
+import { useNavigate } from 'react-router-dom';
 
+const SignupPage = () => {  
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/');
+  };
   return (
     <div className="container">
-      <div className="back-arrow">←</div>
+      <div onClick={handleClick} className="back-arrow">←</div>
       <h1 className="logo">Neuhastone</h1>
       <h2 className="title">회원 가입</h2>
       <SignupForm></SignupForm>
