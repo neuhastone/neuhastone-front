@@ -1,0 +1,22 @@
+/* Button.module.css */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary {
+    background-color: #2D3648;
+    color: white;
+    border: none;
+}
+
+.secondary {
+    background-color: white;
+    color: #333;
+    border: 2px solid #2D3648;
+}
