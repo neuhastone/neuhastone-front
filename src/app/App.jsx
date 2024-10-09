@@ -4,6 +4,7 @@ import LoginPage from '@pages/login'
 import SignupPage from '@pages/signup'
 import ProjectPage from '@pages/project';
 import CreateProjectPage from '@pages/createProject';
+import UserInfoPage from '@pages/userInfo';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />}></Route>
         <Route path="/project" element={<ProjectPage />}></Route>
         <Route path="/create-project" element={<CreateProjectPage />}></Route>
+        <Route path="/user-info" element={<UserInfoPage />}></Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
