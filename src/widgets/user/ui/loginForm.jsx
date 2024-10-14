@@ -1,7 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import Input from '@shared/ui/input'
+import Input from '@shared/ui/InputText'
 import requestLogin from  '@widgets/user/api/login'
 import {setCookie} from  '@shared/cookie/cookie'
 const LoginForm = () => {

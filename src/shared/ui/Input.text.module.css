@@ -2,25 +2,32 @@
 .inputGroup {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    align-items: start;
+    gap: 4px;
 }
 
 .label {
     font-size: 14px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 .input {
-    padding: 12px;
+    width: 240px;
+    padding: 16px;
     font-size: 16px;
-    border: 1px solid #d0d5dd;
+    border: 2px solid #CBD2E0;
     border-radius: 8px;
     background-color: white;
-    color: #333;
+    color: #000;
 }
 
 .input::placeholder {
-    color: #b0b0b0;
+    color: #CBD2E0;
+}
+
+.inputTitle {
+    font-size: 16px;
+    font-weight: bold;
 }

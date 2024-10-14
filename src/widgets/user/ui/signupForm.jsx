@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Input from '@shared/ui/input'
+import Input from '@shared/ui/InputText'
 import requestSignup from  '@widgets/user/api/signup'
 import { useNavigate } from "react-router-dom";
 
