@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import Button from "@shared/ui/Button";
 import InputText from "@shared/ui/InputText";
 import Header from "@shared/ui/header";
+import ProfileContainer from "src/widgets/ProfileContainer.jsx";
 import styles from "./userInfo.module.css";
 
 function UserInfoPage() {
@@ -15,14 +16,15 @@ function UserInfoPage() {
         <div>
             <div>
             <Header 
-                    title="유저 정보 조회" 
-                    buttons={[
-                        {label: "로그아웃", onClick: () => console.log("로그아웃 버튼 클릭됨!")},
-                        {label: "수정하기",onClick: () => console.log("수정하기 버튼 클릭됨!")}
-                    ]}
+                title="유저 정보 조회" 
+                buttons={[
+                    { label: "로그아웃", onClick: () => console.log("로그아웃 버튼 클릭됨!"), variant: "secondary" },
+                    { label: "수정하기", onClick: () => console.log("수정하기 버튼 클릭됨!"), variant: "primary" }
+                ]}
             />
             </div>
             <div className={styles.userInfoContainer}>
+                <ProfileContainer/>
                 <InputText
                     type="text"
                     placeholder="닉네임을 입력해주세요"

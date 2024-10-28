@@ -11,11 +11,10 @@ const Header = ({ title, buttons }) => {
                 {buttons.map((button, index) => (
                     <Button 
                         key={index} 
-                        className={styles.Button} 
-                        onClick={button.onClick} // button의 onClick을 사용
-                    >
-                        {button.label} // button의 label을 사용
-                    </Button>
+                        label={button.label} // label을 props로 전달
+                        onClick={button.onClick} 
+                        variant={button.variant} // variant prop 전달
+                    />
                 ))}
             </div>
         </header>
