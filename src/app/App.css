@@ -1,8 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
+  font-size: 62.5%;
+  position: absolute;
+  top: 0;
+}
+
+#root > div {
+  width: 100%;
+  padding: 3rem 20rem;
 }
 
 .logo {

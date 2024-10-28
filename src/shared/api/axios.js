@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000', // API의 기본 URL을 설정합니다.
+  baseURL: 'https://port-0-neuhastone-back-lze5dpt965d223ec.sel4.cloudtype.app/', // API의 기본 URL을 설정합니다.
   headers: {
     'Content-Type': 'application/json',
   },

@@ -5,7 +5,7 @@
     margin-bottom: 20px;
 }
 
-.imagePreview {
+/* .imagePreview {
     width: 150px;
     height: 150px;
     background-color: #f1f5f9;
@@ -38,8 +38,6 @@
     cursor: pointer;
     border: none;
     text-align: center;
-}
+} */
 
-.hiddenInput {
-    display: none; /* 파일 선택 input을 숨김 */
-}
+
